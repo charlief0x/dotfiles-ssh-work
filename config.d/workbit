@@ -1,4 +1,0 @@
-Host workbit
-    HostName workbit
-    User mtc
-    ForwardAgent yes

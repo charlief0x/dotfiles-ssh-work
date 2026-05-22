@@ -1,0 +1,7 @@
+Host github-work
+    HostName github.com
+    User git
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/2024-09-09_fetch_github_prod.pub
+    ControlMaster no

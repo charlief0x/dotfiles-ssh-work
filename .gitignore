@@ -1,0 +1,6 @@
+known_hosts
+known_hosts.old
+control/
+*.pem
+*.p12
+config.local

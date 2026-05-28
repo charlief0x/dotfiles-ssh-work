@@ -26,3 +26,5 @@ Match Host "100.104.242.19,100.76.111.38,100.107.233.110,100.108.73.108,100.116.
 
 Match Host "100.104.242.19,100.76.111.38,100.107.233.110,100.108.73.108,100.116.216.122,100.91.61.95" exec "uname | grep -q Linux"
     IdentityAgent ~/.1password/agent.sock
+    IdentityFile ~/.ssh/2025-11-18_fetch_office_servers.pub
+    IdentitiesOnly yes

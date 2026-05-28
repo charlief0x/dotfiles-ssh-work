@@ -1,0 +1,28 @@
+Host bhm-util-01
+    HostName 100.104.242.19
+
+Host bos-util-01
+    HostName 100.76.111.38
+
+Host chi-util-01
+    HostName 100.107.233.110
+
+Host mcerha-linux-vm
+    HostName 100.108.73.108
+
+Host msn-util-01
+    HostName 100.116.216.122
+
+Host nyc-util-01
+    HostName 100.91.61.95
+
+Match Host "bhm-util-01,bos-util-01,chi-util-01,mcerha-linux-vm,msn-util-01,nyc-util-01"
+    User fetch
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/2025-11-18_fetch_office_servers.pub
+
+Match Host "bhm-util-01,bos-util-01,chi-util-01,mcerha-linux-vm,msn-util-01,nyc-util-01" exec "uname | grep -q Darwin"
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Match Host "bhm-util-01,bos-util-01,chi-util-01,mcerha-linux-vm,msn-util-01,nyc-util-01" exec "uname | grep -q Linux"
+    IdentityAgent ~/.1password/agent.sock
